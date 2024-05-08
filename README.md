@@ -1,9 +1,17 @@
-# Fetch Client
+# Fetch Client Free
 
 <div>
-  <img src="https://github.com/Ganesan-Chandran/vscode-fetch-client/blob/main/icons/fetch-client.png?raw=true" width="120" height="120">
+  <img src="https://github.com/egorovsa/vscode-fetch-client/blob/main/icons/fetch-client.png?raw=true" width="120" height="120">
   <br/>
 </div>
+
+## Fork motivation
+
+This is the updated fork of the [original Fetch Client](https://github.com/Ganesan-Chandran/vscode-fetch-client)
+
+Since this package is no longer updated I decided to improve it. I found that it's impossible 
+to save all request inside of a project folder, so now it's possible.
+I added a new option `keepInLocalFolder` so now you are able to commit it with your project.
 
 ## What is Fetch Client ?
 
