@@ -1,11 +1,12 @@
 {
-  "name": "fetch-client-free",
-  "displayName": "Fetch Client",
+  "name": "rest-client-free",
+  "displayName": "Rest Client Free",
   "description": "Rest API Client for VS Code which is used to test your API's within VS Code.",
   "version": "2.0.0",
   "publisher": "SergeyEgorov",
   "author": {
-    "name": "Ganesan Chandran <https://ganesan-chandran.github.io/>"
+    "name": "Ganesan Chandran",
+    "email": "https://ganesan-chandran.github.io/>"
   },
   "engines": {
     "vscode": "^1.65.0"
