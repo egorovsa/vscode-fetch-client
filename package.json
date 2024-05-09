@@ -57,10 +57,7 @@
   "contributes": {
     "keybindings": [
       {
-        "command": "workbench.view.extension.fetch-client",
-        "key": "ctrl+alt+n",
-        "mac": "cmd+shift+n",
-        "linux": "ctrl+alt+n"
+        "command": "workbench.view.extension.fetch-client"
       }
     ],
     "commands": [
