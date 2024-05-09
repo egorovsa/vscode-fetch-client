@@ -4,10 +4,12 @@ import { responseTypes } from '../configuration';
 import { writeLog } from '../logger/logger';
 import { ICookie } from '../../fetch-client-ui/components/Cookies/redux/types';
 import { cookieDBPath } from './dbPaths';
+import { checkDbFilesAndCreateIfNotExist } from './checkDbFilesAndCreateIfNotExist';
 
 
 function getDB(): loki {
   const idbAdapter = new LokiFsAdapter();
+  checkDbFilesAndCreateIfNotExist();
   const db = new loki(cookieDBPath(), { adapter: idbAdapter });
   return db;
 }

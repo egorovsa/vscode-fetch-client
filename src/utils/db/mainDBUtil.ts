@@ -15,15 +15,18 @@ import { FetchClientDataProxy } from "../ImportDataValidator";
 import { isFolder } from "../../fetch-client-ui/components/SideBar/util";
 import { InitialSettings } from "../../fetch-client-ui/components/SideBar/redux/reducer";
 import { collectionDBPath, mainDBPath } from "./dbPaths";
+import { checkDbFilesAndCreateIfNotExist } from "./checkDbFilesAndCreateIfNotExist";
 
 function getDB(): loki {
   const idbAdapter = new LokiFsAdapter();
+  checkDbFilesAndCreateIfNotExist();
   const db = new loki(mainDBPath(), { adapter: idbAdapter });
   return db;
 }
 
 function getCollectionDB(): loki {
   const idbAdapter = new LokiFsAdapter();
+  checkDbFilesAndCreateIfNotExist();
   const db = new loki(collectionDBPath(), { adapter: idbAdapter });
   return db;
 }

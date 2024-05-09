@@ -6,16 +6,17 @@ import { getNonce, requestTypes, responseTypes } from '../configuration';
 import { SaveHistory, UpdateHistory } from '../db/historyDBUtil';
 import { GetExitingItem, SaveRequest, UpdateRequest } from '../db/mainDBUtil';
 import { apiFetch } from '../fetchUtil';
-import { getConfiguration, getLayoutConfiguration, getTimeOutConfiguration } from '../vscodeConfig';
+import { getConfiguration, getLayoutConfiguration } from '../vscodeConfig';
 import { SideBarProvider } from './sideBarUIProvider';
 import axios, { CancelTokenSource } from 'axios';
 import { writeLog } from '../logger/logger';
 import { GetAllVariable, GetVariableById, UpdateVariable } from '../db/varDBUtil';
 import { getTimeOut } from '../vscodeConfig';
-import { getStorageManager, OpenCookieUI, OpenVariableUI } from '../../extension';
+import { getStorageManager } from '../../extension';
 import { formatDate } from '../helper';
 import { GetParentSettings, UpdateCollection } from '../db/collectionDBUtil';
 import { GetAllCookies, SaveCookie } from '../db/cookieDBUtil';
+import { OpenCookieUI, OpenVariableUI } from '../commands';
 
 export const MainUIProvider = (extensionUri: any, sideBarProvider: SideBarProvider) => {
   const disposable = vscode.commands.registerCommand('fetch-client.newRequest', (id?: string, name?: string, colId?: string, varId?: string, type?: string, folderId?: string,) => {

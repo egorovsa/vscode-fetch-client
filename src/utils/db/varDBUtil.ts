@@ -9,10 +9,12 @@ import { FetchClientVariableProxy } from '../ImportVariableValidator';
 import { formatDate } from '../helper';
 import { RemoveVariable } from './collectionDBUtil';
 import { variableDBPath } from './dbPaths';
+import { checkDbFilesAndCreateIfNotExist } from './checkDbFilesAndCreateIfNotExist';
 
 
 function getDB(): loki {
   const idbAdapter = new LokiFsAdapter();
+  checkDbFilesAndCreateIfNotExist();
   const db = new loki(variableDBPath(), { adapter: idbAdapter });
   return db;
 }

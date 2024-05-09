@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
-import { getStorageManager, OpenAddToColUI, OpenAttachVariableUI, OpenColSettings, OpenCopyToColUI, OpenCurlUI, OpenExistingItem, OpenRunAllUI, OpenVariableUI } from '../../extension';
-import { ICollections, IFolder, IHistory, IVariable } from '../../fetch-client-ui/components/SideBar/redux/types';
+import { getStorageManager  } from '../../extension';
+import { OpenAddToColUI, OpenAttachVariableUI, OpenColSettings, OpenCopyToColUI, OpenCurlUI, OpenExistingItem, OpenRunAllUI, OpenVariableUI } from '../commands';
+import { ICollections, IFolder, IHistory } from '../../fetch-client-ui/components/SideBar/redux/types';
 import { getNonce, requestTypes, responseTypes } from '../../utils/configuration';
 import { AddToCollection, AttachVariable, CreateNewCollection, DeleteAllCollectionItems, DeleteCollection, DeleteCollectionItem, DuplicateItem, GetAllCollections, NewFolderToCollection, NewRequestToCollection, RenameCollection, RenameCollectionItem } from '../../utils/db/collectionDBUtil';
 import { DeleteAllHistory, DeleteHistory, GetAllHistory, RenameHistory } from '../../utils/db/historyDBUtil';

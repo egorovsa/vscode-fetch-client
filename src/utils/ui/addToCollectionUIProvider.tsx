@@ -1,13 +1,14 @@
 import * as vscode from 'vscode';
 import fs from "fs";
-import { getStorageManager, OpenExistingItem, sideBarProvider } from '../../extension';
+import { getStorageManager, sideBarProvider } from '../../extension';
 import { getNonce, requestTypes } from '../configuration';
-import { AddToCollection, AttachVariable, CopyToCollection, ExecuteMultipleRequest, ExecuteRequest, GetAllCollectionName, GetAllCollectionsById, GetCollectionSettings, GetParentSettings, SaveCollectionSettings } from '../db/collectionDBUtil';
+import { AddToCollection, AttachVariable, CopyToCollection, ExecuteMultipleRequest, ExecuteRequest, GetAllCollectionName, GetAllCollectionsById, GetCollectionSettings,  SaveCollectionSettings } from '../db/collectionDBUtil';
 import { GetHistoryById } from '../db/historyDBUtil';
 import { GetAllVariable, GetVariableById, UpdateVariable } from '../db/varDBUtil';
 import { apiFetch } from '../fetchUtil';
 import { getTimeOut } from '../vscodeConfig';
 import { writeLog } from '../logger/logger';
+import { OpenExistingItem } from '../commands';
 
 export const AddToColUI = (extensionUri: any) => {
   const disposable = vscode.commands.registerCommand('fetch-client.addToCol', (colId: string, folderId: string, name: string, type: string, varId?: string) => {

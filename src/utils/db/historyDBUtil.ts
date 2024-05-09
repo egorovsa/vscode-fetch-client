@@ -11,9 +11,11 @@ import {
 import { writeLog } from "../logger/logger";
 import path from "path";
 import { historyDBPath } from "./dbPaths";
+import { checkDbFilesAndCreateIfNotExist } from "./checkDbFilesAndCreateIfNotExist";
 
 function getDB(): loki {
   const idbAdapter = new LokiFsAdapter();
+  checkDbFilesAndCreateIfNotExist();
   const db = new loki(historyDBPath(), {
     adapter: idbAdapter,
   });

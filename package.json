@@ -2,7 +2,7 @@
   "name": "rest-client-free",
   "displayName": "Rest Client Free",
   "description": "Rest API Client for VS Code which is used to test your API's within VS Code.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publisher": "SergeyEgorov",
   "author": {
     "name": "Ganesan Chandran",
